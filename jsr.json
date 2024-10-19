@@ -1,6 +1,6 @@
 {
     "name": "@coin/vector2d",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "ISC",
     "exports": "./src/index.ts"
 }

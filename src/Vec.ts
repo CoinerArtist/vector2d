@@ -57,7 +57,9 @@ export class Vec{
         return Math.atan2(this.y, this.x) || 0 
     }
     set angle(n: number){ 
-        this.rotate(n - this.angle) 
+        const length = this.length
+        this.x = Math.cos(n) * length
+        this.y = Math.sin(n) * length
     }
 
     // --- Copy --- //
@@ -169,19 +171,12 @@ export class Vec{
     }
 
     normalize(length=1): this {
-        if(this.length===0){ 
-            this.x = length
-        } else {
-            const coef = length/this.length
-            this.x *= coef
-            this.y *= coef
-        }
+        this.length = length
         return this
     }
 
     rotate(angle: number): this {
-        this.x = this.x * Math.cos(angle) - this.y * Math.sin(angle)
-        this.y = this.x * Math.sin(angle) + this.y * Math.cos(angle)
+        this.angle = this.angle + angle
         return this
     }
     setAngle(angle: number): this {

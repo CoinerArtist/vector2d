@@ -17,8 +17,10 @@ v1.add(v2) // v1 is now (4, 6)
 const v3 = v1.copy().add(v2)
 // or
 const v4 = v1.c.add(v2)
+// or
+const v5 = Vec.from(v1).add(v2)
 
 // Methods that change the left vector always return 'this'.
-const v5 = v3.c.add(v1).mul(2).subN(10, 11).mulV(v2)
+const v6 = v3.c.add(v1).mul(2).subN(10, 11).mulV(v2)
 ```
 

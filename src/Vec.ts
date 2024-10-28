@@ -31,6 +31,11 @@ export class Vec{
         return new Vec(v.x, v.y)
     }
 
+    /** Shorthand for `fromVecLike` */
+    static from(v: VecLike): Vec {
+        return new Vec(v.x, v.y)
+    }
+
     static fromAngle(angle: number, length=1): Vec {
         return new Vec(Math.cos(angle) * length, Math.sin(angle) * length)
     }
@@ -68,7 +73,7 @@ export class Vec{
         return new Vec(this.x, this.y)
     }
 
-    /** Shorthand for copy() */
+    /** Shorthand for `copy()` */
     get c(): Vec {
         return new Vec(this.x, this.y)
     }
@@ -389,26 +394,26 @@ export class Vec{
 
     // --- Constants --- //
 
-    static zero: VecLike = { x: 0, y: 0 };
-    static one: VecLike = { x: 1, y: 1 };
-    static minusOne: VecLike = { x: -1, y: -1 };
+    static readonly zero: VecLike = { x: 0, y: 0 };
+    static readonly one: VecLike = { x: 1, y: 1 };
+    static readonly minusOne: VecLike = { x: -1, y: -1 };
     
-    static left: VecLike = { x: -1, y: 0 };
-    static right: VecLike = { x: 1, y: 0 };
-    static up: VecLike = { x: 0, y: -1 };
-    static down: VecLike = { x: 0, y: 1 };
+    static readonly left: VecLike = { x: -1, y: 0 };
+    static readonly right: VecLike = { x: 1, y: 0 };
+    static readonly up: VecLike = { x: 0, y: -1 };
+    static readonly down: VecLike = { x: 0, y: 1 };
     
-    static center: VecLike = { x: 0.5, y: 0.5 };
+    static readonly center: VecLike = { x: 0.5, y: 0.5 };
     
-    static topLeft: VecLike = { x: 0, y: 0 };
-    static topMiddle: VecLike = { x: 0.5, y: 0 };
-    static topRight: VecLike = { x: 1, y: 0 };
+    static readonly topLeft: VecLike = { x: 0, y: 0 };
+    static readonly topMiddle: VecLike = { x: 0.5, y: 0 };
+    static readonly topRight: VecLike = { x: 1, y: 0 };
     
-    static middleLeft: VecLike = { x: 0, y: 0.5 };
-    static middleMiddle: VecLike = { x: 0.5, y: 0.5 };
-    static middleRight: VecLike = { x: 1, y: 0.5 };
+    static readonly middleLeft: VecLike = { x: 0, y: 0.5 };
+    static readonly middleMiddle: VecLike = { x: 0.5, y: 0.5 };
+    static readonly middleRight: VecLike = { x: 1, y: 0.5 };
     
-    static bottomLeft: VecLike = { x: 0, y: 1 };
-    static bottomMiddle: VecLike = { x: 0.5, y: 1 };
-    static bottomRight: VecLike = { x: 1, y: 1 };
+    static readonly bottomLeft: VecLike = { x: 0, y: 1 };
+    static readonly bottomMiddle: VecLike = { x: 0.5, y: 1 };
+    static readonly bottomRight: VecLike = { x: 1, y: 1 };
 }

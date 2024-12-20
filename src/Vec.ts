@@ -73,11 +73,6 @@ export class Vec{
         return new Vec(this.x, this.y)
     }
 
-    /** Shorthand for `copy()` */
-    get c(): Vec {
-        return new Vec(this.x, this.y)
-    }
-
     // --- Basic Operators --- //
 
     add(v: VecLike): this {
